@@ -26,8 +26,8 @@ HEIGHT_INTERVAL = 0.004
 
 class TestingScreenAuto(BaseScreen):
     sensor = Sensor()
-    load_cell_height = StringProperty("N/A")
-    loadCellHeightUnits = " cm"
+    #load_cell_height = StringProperty("N/A")
+    #loadCellHeightUnits = " cm"
     plot = StringProperty("N/A")
     operator = StringProperty("N/A")
     time = StringProperty("N/A")
@@ -44,7 +44,7 @@ class TestingScreenAuto(BaseScreen):
         list of notes. Show the default buttons."""
         self.event = Clock.schedule_interval(self.update_time, ONE_SEC)
         self.event2 = Clock.schedule_interval(self.update_height, HEIGHT_INTERVAL)
-        self.load_cell_height = self.get_load_cell_sensor_height()
+        #self.load_cell_height = self.get_load_cell_sensor_height()
         config.set('height', float(self.load_cell_height))
         self.plot = str(config.get('plot_num', 0))
         self.operator = str(config.get('operator', 'N/A'))
@@ -72,6 +72,6 @@ class TestingScreenAuto(BaseScreen):
         config.set('height_notification',"ON")
         self.event.cancel()
 
-    def get_load_cell_sensor_height(self):
-        sensor_data = self.sensor.get_sensor_data(0)
-        return str("%.2f" % sensor_data["Load Cell Height"])
+    #def get_load_cell_sensor_height(self):
+    #    sensor_data = self.sensor.get_sensor_data(0)
+    #    return str("%.2f" % sensor_data["Load Cell Height"])

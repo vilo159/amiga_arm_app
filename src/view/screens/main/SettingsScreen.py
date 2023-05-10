@@ -49,11 +49,11 @@ class SettingsScreen(BaseScreen):
         config.save_as(os.path.join(path, filename))
         self.dismiss_popup()
 
-    def update_os_git(self):
+    def update_os_git(self): #Probably gonna need to update these
         os.system("git pull")
         os.system("python3 main.py")
 
-    def update_os_usb(self):
+    def update_os_usb(self): # Probably gonna need to update these
         os.system("sudo mount -t vfat -o uid=pi,gid=pi /dev/sda1 /mnt/usbStick")
         os.system("sudo cp -r /mnt/usbStick/FIELDAQ/ ~/") # The pi's cp command has strange behavior
         os.system("sudo umount /mnt/usbStick")

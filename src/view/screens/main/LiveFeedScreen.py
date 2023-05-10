@@ -26,40 +26,40 @@ class LiveFeedScreen(BaseScreen):
     transition_to_state = StringProperty("Pause")
 
     #temperature_label = StringProperty("Temperature")
-    humidity_label = StringProperty("Humidity")
-    location_label = StringProperty("Location")
-    time_label = StringProperty("Time")
+    #humidity_label = StringProperty("Humidity")
+    #location_label = StringProperty("Location")
+    #time_label = StringProperty("Time")
     x_load_label = StringProperty("X Load")
-    y_load_label = StringProperty("Y Load")
+    #y_load_label = StringProperty("Y Load")
     friction_load_label = StringProperty("Friction Load")
-    imu_angle_label = StringProperty("IMU Angle")
-    data_rate_label = StringProperty("Data Rate")
-    load_cell_height_label = StringProperty("Load Cell Height")
-    current_date_label = StringProperty("Date")
+    #imu_angle_label = StringProperty("IMU Angle")
+    #data_rate_label = StringProperty("Data Rate")
+    #load_cell_height_label = StringProperty("Load Cell Height")
+    #current_date_label = StringProperty("Date")
 
     #temperature = StringProperty("0")
-    humidity = StringProperty("0")
-    location = StringProperty("0.00, 0.00")
-    time = StringProperty("00:00:00 AM")
+    #humidity = StringProperty("0")
+    #location = StringProperty("0.00, 0.00")
+    #time = StringProperty("00:00:00 AM")
     x_load = StringProperty("0.00")
-    y_load = StringProperty("0.00")
+    #y_load = StringProperty("0.00")
     friction_load = StringProperty("0.00")
-    imu_angle = StringProperty("0")
-    data_rate = StringProperty("0")
-    current_date = StringProperty("01/01/2000")
-    load_cell_height = StringProperty("0.00")
+    #imu_angle = StringProperty("0")
+    #data_rate = StringProperty("0")
+    #current_date = StringProperty("01/01/2000")
+    #load_cell_height = StringProperty("0.00")
 
-    old_time = 0
+    #old_time = 0
     xUnits = " N"
     frictionUnits = " N"
-    imuUnits = u'\N{DEGREE SIGN}'
-    loadCellHeightUnits = 'cm'
+    #imuUnits = u'\N{DEGREE SIGN}'
+    #loadCellHeightUnits = 'cm'
 
 
     def on_pre_enter(self):
         self.event = Clock.schedule_interval(self.update_values, INTERVAL)
         self.transition_to_state = "Pause"
-        self.sensor.clear_gps_memory()
+        #self.sensor.clear_gps_memory()
         self.ids['adc_button_text'].text = 'ADC\nValues'
         self.adc_out = 0
 
@@ -70,18 +70,18 @@ class LiveFeedScreen(BaseScreen):
             sensor_data = self.sensor.get_sensor_data(self.adc_out)
             #self.temperature = str("%.1f" % sensor_data["Temperature"])
             #self.humidity = str("%.1f" % sensor_data["Humidity"])
-            self.location = ('(' + str("%.3f" % sensor_data["Location"][0]) + ', ' + str("%.3f" % sensor_data["Location"][1]) + ')')
-            self.time = datetime.datetime.now().strftime("%H:%M:%S %p")
-            self.current_date = datetime.date.today().strftime("%d/%m/%Y")
-            self.y_load = str("%.1f" % sensor_data["Y Load"])
+            #self.location = ('(' + str("%.3f" % sensor_data["Location"][0]) + ', ' + str("%.3f" % sensor_data["Location"][1]) + ')')
+            #self.time = datetime.datetime.now().strftime("%H:%M:%S %p")
+            #self.current_date = datetime.date.today().strftime("%d/%m/%Y")
+            #self.y_load = str("%.1f" % sensor_data["Y Load"])
             if self.adc_out == 0:
                 self.x_load = str("%.3f" % sensor_data["X Load"])
                 self.friction_load = str("%.3f" % sensor_data["Friction Load"])
             else:
                 self.x_load = str("%.0f" % sensor_data["X Load"])
                 self.friction_load = str("%.0f" % sensor_data["Friction Load"])
-            self.imu_angle = str("%.3f" % sensor_data["IMU Angle"])
-            self.load_cell_height = str("%.2f" % sensor_data["Load Cell Height"])
+            #self.imu_angle = str("%.3f" % sensor_data["IMU Angle"])
+            #self.load_cell_height = str("%.2f" % sensor_data["Load Cell Height"])
             # Calculate Data Acquisition Rate
             now = datetime.datetime.now()
             new_time = (int(now.strftime("%M")) * 60) + int(now.strftime("%S")) + (int(now.strftime("%f"))/1000000)
@@ -101,13 +101,13 @@ class LiveFeedScreen(BaseScreen):
             adcButton.text = 'Real\nUnits'
             self.xUnits = ""
             self.frictionUnits = ""
-            self.imuUnits = u'\N{DEGREE SIGN}'
+            #self.imuUnits = u'\N{DEGREE SIGN}'
         else:
             self.adc_out = 0
             adcButton.text = 'ADC\nValues'
             self.xUnits = " N"
             self.frictionUnits = " N"
-            self.imuUnits = u'\N{DEGREE SIGN}'
+            #self.imuUnits = u'\N{DEGREE SIGN}'
 
     def on_leave(self):
         self.event.cancel()

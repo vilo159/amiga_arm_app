@@ -67,16 +67,17 @@ CHAN7 = AnalogIn(ads2, ADS.P3) # closest to vcc and ground on pinout connector
 
 # Channels for the pot and force sensors
 
-HEIGHT_POT_CHAN = CHAN1
+#HEIGHT_POT_CHAN = CHAN1
 FRICTION_CHAN = CHAN2
 
 X_LOAD_CHAN = CHAN4
-Y_LOAD_CHAN = CHAN2
+#Y_LOAD_CHAN = CHAN2
 
 # Scaling factor for the force sensor
 FORCE_SENSOR_SCALING = 16 # 3556.1878
 # ads2.gain = FORCE_SENSOR_SCALING
 
+'''
 # GPS
 gps = adafruit_gps.GPS(uart, debug=False)
 gps.send_command(b'PMTK314,0,1,0,1,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0')
@@ -112,3 +113,4 @@ for in1, in2, pwm in zip(IN1, IN2, PWM):
     GPIO.setup(in1, GPIO.OUT)
     GPIO.setup(in2, GPIO.OUT)
     GPIO.setup(pwm, GPIO.OUT)
+'''

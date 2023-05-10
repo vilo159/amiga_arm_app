@@ -34,7 +34,7 @@
             GranuTitle:
                 text: 'Live Feed'
             GridLayout:
-                cols: 3
+                cols: 2 #3
                 spacing: 10
                 LiveFeedInfoBox:
                     id: current_date
@@ -42,25 +42,25 @@
                 LiveFeedInfoBox:
                     id: time
                     text: root.time_label + ':\n' + root.time
-                LiveFeedInfoBox:
-                    id: location
-                    size_hint_x: 1.25
-                    text: root.location_label + ':\n' + root.location
+                #LiveFeedInfoBox:
+                #    id: location
+                #    size_hint_x: 1.25
+                #    text: root.location_label + ':\n' + root.location
                 LiveFeedInfoBox:
                     id: x_load
                     text: root.x_load_label + ':\n' + root.x_load + root.xUnits
-                LiveFeedInfoBox:
-                    id: y_load
-                    text: root.y_load_label + ':\n' + root.y_load
-                LiveFeedInfoBox:
-                    id: load_cell_height
-                    text: root.load_cell_height_label + ':\n' + root.load_cell_height + root.loadCellHeightUnits
+                #LiveFeedInfoBox:
+                #    id: y_load
+                #    text: root.y_load_label + ':\n' + root.y_load
+                #LiveFeedInfoBox:
+                #    id: load_cell_height
+                #    text: root.load_cell_height_label + ':\n' + root.load_cell_height + root.loadCellHeightUnits
                 LiveFeedInfoBox:
                     id: friction_load
                     text: root.friction_load_label + ':\n' + root.friction_load + root.frictionUnits
-                LiveFeedInfoBox:
-                    id: imu_angle
-                    text: root.imu_angle_label + ':\n' + root.imu_angle + root.imuUnits
+                #LiveFeedInfoBox:
+                #    id: imu_angle
+                #    text: root.imu_angle_label + ':\n' + root.imu_angle + root.imuUnits
                 LiveFeedInfoBox:
                     id: cpu_time
                     text: root.data_rate_label + ':\n' + root.data_rate + " Hz"

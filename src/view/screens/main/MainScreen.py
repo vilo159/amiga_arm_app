@@ -43,8 +43,8 @@ class MainScreen(BaseScreen):
         self.sensor.get_header_data()
         sensor_data = self.sensor.get_sensor_data()
         self.current_date = datetime.date.today().strftime("%d/%m/%Y")
-        self.load_cell_height = str("%.2f" % sensor_data["Load Cell Height"])
-        self.location = ('(' + str("%.4f" % sensor_data["Location"][0]) + ', ' + str("%.4f" % sensor_data["Location"][1]) + ')')
+        #self.load_cell_height = str("%.2f" % sensor_data["Load Cell Height"])
+        #self.location = ('(' + str("%.4f" % sensor_data["Location"][0]) + ', ' + str("%.4f" % sensor_data["Location"][1]) + ')')
         try:
             self.event3.cancel()
         except:

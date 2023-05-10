@@ -22,8 +22,8 @@ ONE_SEC = 1
 
 class TestingScreen(BaseScreen):
     sensor = Sensor()
-    load_cell_height = StringProperty("N/A")
-    loadCellHeightUnits = " cm"
+    #load_cell_height = StringProperty("N/A")
+    #loadCellHeightUnits = " cm"
     plot = StringProperty("N/A")
     operator = StringProperty("N/A")
     time = StringProperty("0")
@@ -36,7 +36,7 @@ class TestingScreen(BaseScreen):
         """Before the Screen loads, read the configuration file to get the current
         list of notes. Show the default buttons."""
         self.event = Clock.schedule_interval(self.update_time, ONE_SEC)
-        self.load_cell_height = self.get_height()
+        #self.load_cell_height = self.get_height()
         config.set('height', float(self.load_cell_height))
         self.plot = str(config.get('plot_num', 0))
         self.operator = str(config.get('operator', 'N/A'))
@@ -59,5 +59,5 @@ class TestingScreen(BaseScreen):
     def on_leave(self):
         self.event.cancel()
 
-    def get_height(self):
-        return str(config.get('height', 0))
+    #def get_height(self):
+    #    return str(config.get('height', 0))
