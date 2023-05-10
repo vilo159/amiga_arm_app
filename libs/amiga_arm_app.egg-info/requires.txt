@@ -1,0 +1,9 @@
+farm_ng_amiga
+kivy
+numpy
+wheel
+
+[dev]
+mypy
+pre-commit>=2.0
+pytest

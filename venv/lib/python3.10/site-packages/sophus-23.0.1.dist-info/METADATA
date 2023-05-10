@@ -1,0 +1,36 @@
+Metadata-Version: 2.1
+Name: sophus
+Version: 23.0.1
+Summary: 
+Requires-Dist: farm-ng-package
+Requires-Dist: grpcio
+Requires-Dist: protobuf
+Provides-Extra: dev
+Requires-Dist: grpcio-tools ; extra == 'dev'
+Requires-Dist: mypy-protobuf ; extra == 'dev'
+Requires-Dist: mypy (==0.971) ; extra == 'dev'
+Requires-Dist: pre-commit (==2.20.0) ; extra == 'dev'
+Requires-Dist: pylint ; extra == 'dev'
+Requires-Dist: pylint-protobuf (==0.20.2) ; extra == 'dev'
+Requires-Dist: pytest-mypy (==0.9.1) ; extra == 'dev'
+Requires-Dist: pytest (==7.1.2) ; extra == 'dev'
+Requires-Dist: types-protobuf ; extra == 'dev'
+
+c++ 2d/3d manifold library - only python support for Sophus ProtoBuf
+messages are included in this package so far.
+Home-page: UNKNOWN
+Author: Farm-ng Inc.
+Author-email: info@farm-ng.com
+License: UNKNOWN
+Description: UNKNOWN
+Keywords: robotics,open-source
+Platform: UNKNOWN
+Classifier: Development Status :: 4 - Beta
+Classifier: Intended Audience :: Developers
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Operating System :: OS Independent
+Classifier: Programming Language :: Python :: 3
+Classifier: Topic :: Software Development
+Classifier: Framework :: Robot Framework
+Requires-Python: >=3.6
+Provides-Extra: dev

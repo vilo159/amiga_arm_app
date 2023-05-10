@@ -1,0 +1,61 @@
+{
+    "curr_test_num": 10,
+    "folder": "jordan",
+    "height_sensor": "OFF",
+    "barcode_scan": "OFF",
+    "plot_num": 75,
+    "height_notification": "ON",
+    "notes": {
+        "posttest": [],
+        "pretest": [
+            "with sheaths",
+            "flex test"
+        ],
+        "bank": [
+            "without sheaths",
+            "break test",
+            "A-0002",
+            "A-0001"
+        ]
+    },
+    "sensors": {
+        "X Load": {
+            "slope": 1,
+            "points_list": [
+                [
+                    688.0,
+                    717521.0
+                ]
+            ],
+            "intercept": 0
+        },
+        "Pot Angle": {
+            "slope": 1.0,
+            "points_list": [],
+            "intercept": 0.0
+        },
+        "IMU Angle": {
+            "offset": 89.888
+        }
+    },
+    "selected_folder": "jordan",
+    "unwanted_folder": " ",
+    "height": 60.0,
+    "test_notes": {
+        "posttest": [
+            "jp testing"
+        ],
+        "pretest": [
+            "without sheaths"
+        ],
+        "bank": []
+    },
+    "operator": "jp",
+    "prev_height": 0,
+    "break_height": "N/A",
+    "folders": [
+        "chicken",
+        "duck",
+        "jordan"
+    ]
+}

@@ -1,0 +1,20 @@
+Metadata-Version: 2.1
+Name: amiga-arm-app
+Version: 0.0.1
+Summary: Amiga app to collect data from the ARM deice
+Home-page: https://github.com/farm-ng/amiga-app-template
+Author: Farm-nge, Inc.
+Author-email: carter.noh08@gmail.com
+License: UNKNOWN
+Download-URL: https://github.com/farm-ng/amiga-app-template
+Keywords: robotics,open-source
+Platform: UNKNOWN
+Classifier: Programming Language :: Python :: 3
+Classifier: Topic :: Software Development
+Classifier: Framework :: Robot Framework
+Requires-Python: >=3.6
+Provides-Extra: dev
+License-File: LICENSE
+
+UNKNOWN
+

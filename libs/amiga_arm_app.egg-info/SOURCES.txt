@@ -1,0 +1,9 @@
+LICENSE
+README.md
+setup.cfg
+setup.py
+libs/amiga_arm_app.egg-info/PKG-INFO
+libs/amiga_arm_app.egg-info/SOURCES.txt
+libs/amiga_arm_app.egg-info/dependency_links.txt
+libs/amiga_arm_app.egg-info/requires.txt
+libs/amiga_arm_app.egg-info/top_level.txt
